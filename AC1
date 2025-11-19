@@ -1,0 +1,153 @@
+1- Síntese de Imagens / Computação Gráfica
+
+Objetivo:
+Gerar imagens do zero, por meio de modelos matemáticos e geométricos.
+
+Palavras-chave:
+Renderização, modelagem 3D, shaders, ray tracing, animação.
+
+Resumo:
+Computação gráfica cria imagens artificiais — não interpreta uma imagem real, mas sintetiza uma nova.
+
+Exemplos reais:
+
+Pixar / animação 3D
+
+Jogos 3D (Unreal, Unity)
+
+Simulações visuais
+Renderização simples de um objeto 3D.
+
+Abaixo um código que gera uma imagem por ray tracing simples (renderização de esfera):
+
+import numpy as np
+from PIL import Image
+
+width, height = 400, 400
+img = np.zeros((height, width, 3), dtype=np.uint8)
+
+# posição da esfera
+center = np.array([200, 200, 50])
+radius = 120
+
+for y in range(height):
+    for x in range(width):
+        pixel = np.array([x, y, 0])
+        dist = np.linalg.norm(pixel - center)
+
+        # se está dentro da esfera → pinta
+        if dist < radius:
+            shade = int(255 * (1 - dist / radius))
+            img[y, x] = (shade, 100, 200)
+Image.fromarray(img).save("render_esfera.png")
+
+
+
+
+2- Processamento de Imagens
+
+Objetivo:
+Modificar ou melhorar imagens existentes.
+
+Palavras-chave:
+Filtro, ruído, bordas, histogramas, restauração.
+
+Resumo:
+Trata imagens como sinais, aplicando transformações matemáticas.
+
+Exemplos reais:
+
+Remoção de ruído
+
+Aumento de contraste
+
+Filtros de câmera (blur, sharpen)
+
+código de Detecção de Bordas:
+
+Aplicação selecionada: Filtro Canny do OpenCV.
+
+import cv2
+
+img = cv2.imread("input.jpg", 0)
+edges = cv2.Canny(img, 100, 200)
+
+cv2.imwrite("bordas.png", edges)
+
+
+
+
+3- Visão Computacional
+
+Objetivo:
+Permitir que máquinas interpretem uma imagem.
+
+Palavras-chave:
+Detecção de objetos, reconhecimento facial, segmentação, deep learning.
+
+Resumo:
+Processamento de imagens + tomada de decisão → entendimento da cena.
+
+Exemplos reais:
+
+Reconhecimento facial
+
+Carros autônomos
+
+OCR (leitura de texto)
+
+código de Detecção de Objetos com YOLO pré-treinado:
+
+import torch
+from PIL import Image
+
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+img = Image.open("street.jpg")
+results = model(img)
+results.save()
+
+
+
+
+4- Visualização Computacional / Científica
+
+Objetivo:
+Transformar dados complexos em imagens compreensíveis.
+
+Palavras-chave:
+Gráficos 2D/3D, mapas térmicos, volume rendering, big data visual.
+
+Resumo:
+Não trabalha com imagens como entrada, mas gera visualizações de dados reais.
+
+Exemplos reais:
+
+Simulações climáticas
+
+MRI / tomografia 3D
+
+Gráficos de grandes volumes de dados
+
+código de Gráfico 3D de superfícies:
+
+Aplicação selecionada: Visualização volumétrica/dados 3D.
+
+Exemplo com Matplotlib:
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-5, 5, 200)
+y = np.linspace(-5, 5, 200)
+X, Y = np.meshgrid(x, y)
+Z = np.sin(np.sqrt(X**2 + Y**2))
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+ax.plot_surface(X, Y, Z, cmap='viridis')
+plt.savefig("superficie3d.png")
+
+
+
+
+plt.savefig("superficie3d.png")
