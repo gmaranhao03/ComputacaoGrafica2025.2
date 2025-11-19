@@ -1,0 +1,91 @@
+1- Como o olho humano percebe as cores
+
+A percepção de cor ocorre quando a luz entra no olho humano e atinge a retina, onde existem células fotossensíveis chamadas:
+
+Bastonetes → detectam luz e sombra (visão noturna)
+
+Cones → detectam cores (visão diurna)
+
+A maior parte da percepção de cor é feita pelos cones, que funcionam quando há luz suficiente.
+
+Função dos Cones:
+
+Os cones são divididos em três tipos, cada um sensível a uma faixa específica de comprimento de onda:
+
+Tipo de Cone	  Sensibilidade	    Cor Associada
+L (Long)	      Ondas longas	      Vermelho
+M (Medium)	    Ondas médias	        Verde
+S (Short)	      Ondas curtas	        Azul
+
+Com esses três tipos de cones, o cérebro combina diferentes intensidades de estímulos luminosos, produzindo a percepção de milhões de cores.
+
+
+
+
+
+2- Diferença entre RGB e CMYK
+Modelo RGB:
+
+Representa cores como combinação de Red (vermelho), Green (verde) e Blue (azul).
+
+É um modelo aditivo: começa do preto e adiciona luz para formar outras cores.
+
+Quanto maior a intensidade das luzes R, G e B, mais clara é a cor.
+
+Aplicação:
+
+Monitores, celulares, TVs, projetores, gráficos digitais.
+(Qualquer dispositivo que emite luz.)
+
+Modelo CMYK:
+
+Representa cores com Cyan, Magenta, Yellow e Key (Black).
+
+É um modelo subtrativo: começa do branco e vai retirando luz usando pigmentos.
+
+Usado em tintas e impressões.
+
+Aplicação:
+
+Impressoras a jato de tinta e laser.
+
+Materiais de gráfica → revistas, panfletos, banners.
+
+
+
+
+
+
+3- Cor aditiva vs. cor subtrativa
+
+-> Cor Aditiva:
+
+Combinação de luzes coloridas.
+
+Modelo: RGB
+
+Preto = ausência de luz
+
+Branco = soma máxima de luz (R + G + B)
+
+Exemplo prático:
+
+Um televisor de LED: cada pixel acende luz vermelha, verde e azul para formar as cores.
+
+Palco de show com luzes coloridas se somando no fundo branco.
+
+-> Cor Subtrativa:
+
+Combinação de pigmentos que absorvem (subtraem) luz.
+
+Modelo: CMYK
+
+Branco = papel branco refletindo toda a luz
+
+Preto = pigmentos absorvendo toda a luz
+
+Exemplo prático:
+
+Impressão em papel: as tintas ciano, magenta e amarelo absorvem partes da luz branca para formar outras cores.
+
+Misturar tinta azul + amarela → verde.
